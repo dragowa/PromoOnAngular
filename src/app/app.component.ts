@@ -34,7 +34,6 @@ export class AppComponent {
     localStorage.setItem('promoCode', this.random);
     this.promo.sendPromo(this.random);
     document.getElementById('btn').style.display = 'none';
-    this.limit--;
   };
 
 }
