@@ -12,7 +12,6 @@ import { PromoInfo } from "./models/promo.model";
 export class AppComponent {
   random: string;
   output: number;
-  limit: number = 10; 
  
   constructor(private promo: PromoService) {}
 
