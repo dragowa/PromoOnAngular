@@ -1,0 +1,32 @@
+@media screen and (max-width: 1024px) {
+    .navbar-logo {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .navbar-info ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    header {
+        padding-bottom: 25px!important;
+    }
+    .btn-promo {
+        text-align: center;
+    }
+    .promo-code {
+        text-align: center;
+    }
+    .promo {
+        margin: 0 auto;
+    }
+    .button span {
+        font-size: 45px!important;
+    }
+}
