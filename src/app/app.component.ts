@@ -22,20 +22,28 @@ export class AppComponent {
     }
 
     this.promo.getListPromo().subscribe(users => {
-      this.output = users.length;
-      const limit = 10;
-      this.output = limit - this.output; 
+      if (users.length >= 10) {
+        alert("No promo code more");
+        this.getPromo = null;
+      } else {
+         this.output = users.length;
+         const limit = 10;
+         this.output = limit - this.output; 
+      }
     });  
   };
 
   getPromo() {
-    this.random = this.promo.randomString(15);
-    localStorage.setItem('promoCode', this.random);
-    this.promo.sendPromo(this.random);
-    document.getElementById('btn').style.display = 'none';
+    if (this.output = 0) {
+      alert("No promo code more");
+    } else {
+       this.random = this.promo.randomString(15);
+       localStorage.setItem('promoCode', this.random);
+       this.promo.sendPromo(this.random);
+       document.getElementById('btn').style.display = 'none';
+    }
   };
 
 }
-
 
 
